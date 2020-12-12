@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>nav.tf</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/full.css"/>
+</head>
+<div id="header">
+	<span id="fullIcon" onclick="openFull()">+</span>
+	<span id="headerTitle">nav.tf</span>
+	<span id="headerSubtitle">something something</span>
+</div>
+
+<div id="full">
+	<a class="close" href="javascript:void(0)" onclick="closeFull()">&times;</a>
+	<div class="fullContent">
+
+	<div class="dropNav">
+        {% for s in sections %}
+        <button class="dropBtn" onclick="expand(this)">{{ s.name }}</button>
+        <div class="dropContainer">
+        {% for p in s.pages %}
+            <a href="{{ p.href }}">{{ p.name }}</a>
+        {% endfor %}
+        </div>
+        {% endfor %}
+	</div>
+	</div>
+</div>
+
+<script>
+	function openFull() {
+	  document.getElementById("full").style.display = "block";
+	}
+	function closeFull() {
+	  document.getElementById("full").style.display = "none";
+	}
+	function collapseAll() {
+		var containers = document.getElementsByClassName("dropContainer");
+		var x;
+		for(x = 0; x < containers.length; x++)
+		{
+			containers[x].style.display = "none";
+		}
+		containers = document.getElementsByClassName("dropBtn");
+		for(x = 0; x < containers.length; x++)
+		{
+			containers[x].classList.remove("active");
+		}
+	}
+	function expand(e) {
+		collapseAll();
+		e.nextElementSibling.style.display = "block";
+		e.classList.add("active");
+	}
+
+</script>
+<div id="content">
+{{ content }}
+</body>
+</html>

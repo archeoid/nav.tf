@@ -1,0 +1,11 @@
+<site default="home">
+    <section name="home" default="one">
+        <page name="one"/>
+        <page name="woot"/>
+        <page name="webgl"/>
+        <page name="turtle"/>
+    </section>
+    <section name="another" default="thing">
+        <page name="thing"/>
+    </section>
+</site>

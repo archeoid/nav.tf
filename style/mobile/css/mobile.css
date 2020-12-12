@@ -1,0 +1,10 @@
+#content {
+	margin-left: 1em;
+	padding-left: 0em;
+}
+
+@media only screen and (orientation: portrait) and (max-device-width: 750px) {
+    html {
+        font-size: 2rem;
+    }
+}

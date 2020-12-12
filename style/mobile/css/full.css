@@ -1,0 +1,91 @@
+#fullIcon {
+	display: inline;
+}
+
+#full {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: none;
+    font-size: 1.78em;
+}
+
+#full .content {
+	position: relative;
+	width: 100vw;
+	text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 70vh;
+}
+
+#full .content a {
+	padding: 8px;
+	text-decoration: none;
+	display: block;
+}
+
+#full .close {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.dropNav {
+    margin-left: 25vw;
+    margin-top: 10vw;
+    width: 50vw;
+    float: left;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+  
+.dropNav a, .dropBtn {
+    padding: 6px 8px 6px 16px;
+    font-size: inherit;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropNav a:hover, .dropBtn:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.active {
+    background-color: #e57e22;
+    color: white;
+}
+
+.dropContainer {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+.shown {
+    display: block;
+}
